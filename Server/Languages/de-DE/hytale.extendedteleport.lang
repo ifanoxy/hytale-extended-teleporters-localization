@@ -24,17 +24,17 @@ gui.visibility.private = Privat (nur für dich sichtbar)
 
 # Access Settings
 gui.settings = Teleporter-Einstellungen
-gui.partyOnly = Party-Modus (nur du und vertraute Spieler können ihn nutzen)
-gui.restricted = Beschränkt (nur du kannst ihn nutzen – überschreibt Party-Modus)
+gui.partyOnly = Nur Party (nur du und vertraute Spieler können ihn nutzen)
+gui.restricted = Beschränkt (nur du kannst ihn nutzen, überschreibt Nur-Party Einstellung)
 gui.lockInteraction = Einstellungen sperren (nur du und Vertraute können das GUI öffnen)
-gui.lockBreaking = Abbauen sperren (nur du und Vertraute können abbauen)
-gui.displayWorld = Welt anzeigen (Dimension in Warp-Listen anzeigen)
-gui.displayCoordinates = Koordinaten anzeigen (Position in Warp-Listen anzeigen)
-gui.hideMapWaypoint = Auf Karte ausblenden (keine Wegpunkt-Markierung)
-gui.selfDestruct = Selbstzerstörung (öffentlich, unzerstörbar, zerstört sich nach 5 Min.)
+gui.lockBreaking = Abbauen sperren (nur du und Vertraute können den Teleporter abbauen)
+gui.displayWorld = Welt anzeigen (Welt in Warp-Liste anzeigen)
+gui.displayCoordinates = Koordinaten anzeigen (Position in Warp-Liste anzeigen)
+gui.hideMapWaypoint = Auf Karte ausblenden (keine Markierung auf der Karte setzen)
+gui.selfDestruct = Selbstzerstörung (öffentlich, unzerstörbar, zerstört sich nach 5 Min selber.)
 gui.selfDestructTimer = Selbstzerstörung in: {minutes}:{seconds}
 gui.selfDestructImminent = Selbstzerstörung steht kurz bevor!
-gui.singleUse = Einmalig (Ziel wird nach Benutzung gelöscht)
+gui.singleUse = Einmalig (Teleporter wird nach Benutzung gelöscht)
 
 # Info Labels
 gui.location = Position: {dimension} ({x}, {y}, {z})
@@ -52,7 +52,7 @@ gui.title.configureTeleporter = Teleporter konfigurieren
 # Messages - Permissions & Limits
 # ============================================================
 msg.noPermission.private = Du hast keine Berechtigung, Teleporter privat zu machen.
-msg.noPermission.partyOnly = Du hast keine Berechtigung, den Party-Modus zu aktivieren.
+msg.noPermission.partyOnly = Du hast keine Berechtigung, Nur-Party zu aktivieren.
 msg.noPermission.restricted = Du hast keine Berechtigung, Teleporter zu beschränken.
 msg.noPermission.lockInteraction = Du hast keine Berechtigung, Interaktionen zu sperren.
 msg.noPermission.lockBreak = Du hast keine Berechtigung, das Abbauen zu sperren.
@@ -91,7 +91,7 @@ msg.destination.cleared = Ziel entfernt.
 # ============================================================
 msg.privacy.nowPrivate = Teleporter ist jetzt privat.
 msg.privacy.nowPublic = Teleporter ist jetzt öffentlich.
-msg.privacy.noWarpName = Kann nicht privat gemacht werden – kein Warp-Name gesetzt.
+msg.privacy.noWarpName = Kann nicht privat gemacht werden, kein Warp-Name gesetzt.
 
 # ============================================================
 # Messages - Restriction
@@ -118,7 +118,7 @@ msg.save.teleporterSaved = Teleporter-Einstellungen gespeichert!
 # Messages - Config Disabled
 # ============================================================
 msg.config.privateDisabled = Private Teleporter sind auf diesem Server deaktiviert.
-msg.config.partyDisabled = Party-Modus-Teleporter sind auf diesem Server deaktiviert.
+msg.config.partyDisabled = Nur-Party-Teleporter sind auf diesem Server deaktiviert.
 msg.config.restrictedDisabled = Beschränkte Teleporter sind auf diesem Server deaktiviert.
 msg.config.interactionLockDisabled = Interaktionsgesperrte Teleporter sind auf diesem Server deaktiviert.
 msg.config.breakLockDisabled = Abbaugesperrte Teleporter sind auf diesem Server deaktiviert.
@@ -142,15 +142,15 @@ cmd.trust.playerMustBeOnline = Der Spieler muss online sein, um hinzugefügt zu 
 cmd.trust.cannotTrustSelf = Du kannst dir nicht selbst vertrauen – du bist bereits der Besitzer!
 cmd.trust.alreadyTrusted = {name} ist bereits als vertraut eingetragen.
 cmd.trust.success = {name} wurde als vertraut für „{teleporter}“ hinzugefügt
-cmd.trust.successInfo = Er/Sie kann diesen Teleporter nun auch bei Party-/Beschränkungsmodus nutzen.
+cmd.trust.successInfo = Die Person kann diesen Teleporter nun auch bei Party-/Beschränkungsmodus nutzen.
 
 # ============================================================
 # Commands - Untrust
 # ============================================================
-cmd.untrust.description = Vertrauen eines Spielers entfernen (Benutzung: untrust <spieler> "{teleporter}")
+cmd.untrust.description = Vertrauen eines Spielers entfernen (Benutzung: /teleporter untrust SpielerName "Mein Teleporter")
 cmd.untrust.notOwner = Du kannst nur auf deinen eigenen Teleportern Vertrauen entfernen.
 cmd.untrust.playerNotFound = Spieler nicht gefunden: {name}
-cmd.untrust.useTrustlist = Verwende /teleporter trustlist "{teleporter}", um vertraute Spieler zu sehen.
+cmd.untrust.useTrustlist = Verwende /teleporter trustlist "Mein Teleporter", um vertraute Spieler zu sehen.
 cmd.untrust.notTrusted = {name} ist kein vertrauter Spieler dieses Teleporters.
 cmd.untrust.success = {name} wurde aus der Vertrauensliste von „{teleporter}“ entfernt
 
@@ -160,7 +160,7 @@ cmd.untrust.success = {name} wurde aus der Vertrauensliste von „{teleporter}�
 cmd.trustlist.description = Zeigt vertraute Spieler eines Teleporters an (Benutzung: trustlist "{teleporter}")
 cmd.trustlist.notOwnerOrTrusted = Du kannst die Vertrauensliste nur für eigene Teleporter einsehen.
 cmd.trustlist.empty = Keine vertrauten Spieler auf „{teleporter}“
-cmd.trustlist.addHint = Verwende /teleporter trust <spieler> "{teleporter}", um jemanden hinzuzufügen.
+cmd.trustlist.addHint = Verwende /teleporter trust SpielerName "Mein Teleporter", um jemanden hinzuzufügen.
 cmd.trustlist.header = === Vertraute Spieler auf „{teleporter}“ ===
 cmd.trustlist.total = Gesamt: {count} vertraute Spieler
 
@@ -214,7 +214,7 @@ cmd.go.useListHint = Verwende /teleporter list, um verfügbare Teleporter zu seh
 cmd.go.worldNotLoaded = Welt nicht geladen: {world}
 cmd.go.success = Teleportiert zu: {name}
 cmd.go.successCrossWorld = Teleportiert zu: {name} in {world}
-cmd.go.failed = Teleport fehlgeschlagen – Spielerreferenz ungültig.
+cmd.go.failed = Teleport fehlgeschlagen, Spielerreferenz ungültig.
 
 # ============================================================
 # Commands - Destination
