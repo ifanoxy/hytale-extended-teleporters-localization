@@ -298,3 +298,55 @@ error.teleporterNotFound = Teleporter not found.
 error.notOwner = You are not the owner of this teleporter.
 error.generic = An error occurred. Please try again.
 msg.error.teleporterNotFound = Error: Teleporter not found
+
+# ============================================================
+# GUI - Trust Management
+# ============================================================
+gui.manageTrust = Manage Trust
+
+# Trust Management GUI
+trust.title = Trust Management
+trust.location = {dimension} ({x}, {y}, {z})
+trust.addPlayer = Add Trusted Player
+trust.playerNamePlaceholder = Enter player name
+trust.add = Add
+trust.trustedPlayers = Trusted Players
+trust.noTrustedPlayers = No trusted players yet. Add someone above.
+trust.permissionsFor = Permissions for {name}
+trust.remove = Remove Trust
+trust.save = Save Changes
+trust.close = Close
+
+# Trust Permissions
+trust.perm.rename = Can Rename
+trust.perm.destination = Can Set Destination
+trust.perm.settings = Can Modify Settings
+trust.perm.break = Can Break
+
+# Trust Overview GUI
+trust.overview.title = Trust Overview
+trust.overview.selectTeleporter = Select a Teleporter
+trust.overview.noTeleporters = You don't have any teleporters.
+trust.overview.manage = Manage Trust
+trust.trustedCount = {count} trusted player(s)
+
+# Trust Messages
+trust.noPermission = You don't have permission to manage trust on this teleporter.
+trust.teleporterNotFound = Teleporter not found.
+trust.saved = Trust settings saved!
+trust.add.emptyName = Please enter a player name.
+trust.add.notFound = Player not found or not online: {name}
+trust.add.cannotTrustOwner = You cannot trust yourself - you're already the owner!
+trust.add.alreadyTrusted = {name} is already trusted on this teleporter.
+trust.add.success = Added {name} as trusted.
+
+# Trust GUI Command
+cmd.trustgui.description = Open the Trust Management GUI
+cmd.trustgui.noTeleporters = You have no teleporters. Place one first!
+
+# ============================================================
+# Common
+# ============================================================
+common.player.unknown = Unknown
+common.player.uuidShort = {uuid}...
+common.trustedCountFormat = ({count} trusted)

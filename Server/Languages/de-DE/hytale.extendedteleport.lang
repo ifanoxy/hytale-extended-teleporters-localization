@@ -298,3 +298,10 @@ error.teleporterNotFound = Teleporter nicht gefunden.
 error.notOwner = Du bist nicht der Besitzer dieses Teleporters.
 error.generic = Ein Fehler ist aufgetreten. Bitte versuche es erneut.
 msg.error.teleporterNotFound = Fehler: Teleporter nicht gefunden
+
+# ============================================================
+# Common
+# ============================================================
+common.player.unknown = Unknown
+common.player.uuidShort = {uuid}...
+common.trustedCountFormat = ({count} trusted)

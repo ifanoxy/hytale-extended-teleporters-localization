@@ -298,3 +298,55 @@ error.teleporterNotFound = Teleportador nao encontrado.
 error.notOwner = Voce nao e o dono deste teleportador.
 error.generic = Ocorreu um erro. Por favor, tente novamente.
 msg.error.teleporterNotFound = Erro: Teleportador nao encontrado
+
+# ============================================================
+# GUI - Trust Management
+# ============================================================
+gui.manageTrust = Gerenciar Confianca
+
+# Trust Management GUI
+trust.title = Gerenciamento de Confianca
+trust.location = {dimension} ({x}, {y}, {z})
+trust.addPlayer = Adicionar Jogador Confiavel
+trust.playerNamePlaceholder = Digite o nome do jogador
+trust.add = Adicionar
+trust.trustedPlayers = Jogadores Confiaveis
+trust.noTrustedPlayers = Nenhum jogador confiavel ainda. Adicione alguem acima.
+trust.permissionsFor = Permissoes para {name}
+trust.remove = Remover Confianca
+trust.save = Salvar Alteracoes
+trust.close = Fechar
+
+# Trust Permissions
+trust.perm.rename = Pode Renomear
+trust.perm.destination = Pode Definir Destino
+trust.perm.settings = Pode Modificar Config
+trust.perm.break = Pode Quebrar
+
+# Trust Overview GUI
+trust.overview.title = Visao Geral de Confianca
+trust.overview.selectTeleporter = Selecione um Teleportador
+trust.overview.noTeleporters = Voce nao tem nenhum teleportador.
+trust.overview.manage = Gerenciar Confianca
+trust.trustedCount = {count} jogador(es) confiavel(is)
+
+# Trust Messages
+trust.noPermission = Voce nao tem permissao para gerenciar confianca neste teleportador.
+trust.teleporterNotFound = Teleportador nao encontrado.
+trust.saved = Configuracoes de confianca salvas!
+trust.add.emptyName = Por favor, digite um nome de jogador.
+trust.add.notFound = Jogador nao encontrado ou nao esta online: {name}
+trust.add.cannotTrustOwner = Voce nao pode confiar em si mesmo - voce ja e o dono!
+trust.add.alreadyTrusted = {name} ja e confiavel neste teleportador.
+trust.add.success = {name} adicionado como confiavel.
+
+# Trust GUI Command
+cmd.trustgui.description = Abrir a GUI de Gerenciamento de Confianca
+cmd.trustgui.noTeleporters = Voce nao tem teleportadores. Coloque um primeiro!
+
+# ============================================================
+# Common
+# ============================================================
+common.player.unknown = Unknown
+common.player.uuidShort = {uuid}...
+common.trustedCountFormat = ({count} trusted)
